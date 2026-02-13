@@ -26,10 +26,14 @@ if(!isset($_SESSION['user'])){
 <hr>
 
 <?php
+// Display user's name
+echo "<h3>Welcome, " . htmlspecialchars($_SESSION['user']) . "</h3>";
+
+// Optional: Still show role
 if($_SESSION['role'] == "admin"){
-    echo "<h3>Welcome Admin</h3>";
+    echo "<p>You are logged in as Admin</p>";
 } else {
-    echo "<h3>Welcome Encoder</h3>";
+    echo "<p>You are logged in as Encoder</p>";
 }
 ?>
 
